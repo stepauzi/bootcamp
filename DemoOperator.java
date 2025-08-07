@@ -82,23 +82,30 @@ public class DemoOperator {
       System.out.println("max value=" + max); // max value=10
     }
       // leap year
-      // divided by 4
+      // divided by 4 -> Leap Year
       // divided by 100 -> not a leap year (i.e. 2100, 1900)
-      // divided by 400 -> Leap Yeat (i.e. 2000)
+      // divided by 400 -> Leap Year (i.e. 2000)
       // Cannot divided by 4 -> Not a leap year (i.e. 2025)
 
-      int year = 1900;
+      int year = 2000;
       boolean isLeapYear = false;
-      if (year % 4 == 0){
+      if (year % 4 == 0) {
         if (year % 100 == 0) {
           if (year % 400 == 0) {
             isLeapYear = true;
-          } else {
+          } else { 
             isLeapYear = false;
           }
+        } else { // 2024
+          isLeapYear = true;
+          }
+        } else {
+          isLeapYear = false;
+        }
+        System.out.println("Leap Year? " + isLeapYear);
+
+        isLeapYear = year % 4 == 0
+        && (year % 100 == 0 && year % 400 == 0 || year % 100 != 0);
+        System.out.println("Leap Year? " + isLeapYear);
         }
       }
-      System.out.println("Leap Year? " + isLeapYear);
-
-  }
-}
