@@ -1,7 +1,7 @@
 public class DemoHelloworld {
   public static void main(String[] args) {
     System.out.println("hello world. welcome to bootcamp.");
-    System.out.println("I'm Stephanie");
+    System.out.println("I'm Vincent");
 
     // Comment / Notes 你好
     // You can drop notes here.
@@ -11,6 +11,9 @@ public class DemoHelloworld {
     int x = 3;
     int y = 7;
     double radius = 3.4; // double is to store decimal numbers
+
+    // ! variable name x has been used
+    // double x = 10.0;
 
     System.out.println(x); // 3
     System.out.println(y); // 7
@@ -26,5 +29,9 @@ public class DemoHelloworld {
     a = 17;
     System.out.println(a); // 17
 
+    // Declaration
+    int b;
+    // Assignment
+    b = 9;
   }
 }
