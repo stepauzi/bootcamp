@@ -105,5 +105,82 @@ public class DemoConditional {
     isLeapYear = year % 4 == 0
         && (year % 100 == 0 && year % 400 == 0 || year % 100 != 0);
     System.out.println("Leap Year? " + isLeapYear);
+
+    // if-else if-else
+    int score = 85;
+    char grade = ' ';
+    // A: 90 or above
+    // B: 80 - 89
+    // C: 70 - 79
+    // F: < 70
+    if (score >= 90) {
+      grade = 'A';
+    } else if (score >= 80 && score < 90) {
+      grade = 'B';
+    } else if (score >= 70 && score < 80) {
+      grade = 'C';
+    } else {
+      grade = 'F';
+    }
+    System.out.println("Grade=" + grade); // B
+    // Not elderly and male ->
+    // Elderly ->
+
+    boolean isElderly = false;
+    isMale = true;
+    if (isElderly) {
+
+    } else if (isMale) { // Not an elderly
+
+    }
+
+    // ! Better approach for maintainence
+    if (isElderly) {
+
+    } else { // Not an elderly
+      if (isMale) {
+
+      }
+    }
+
+    // ! 1. if-else, if-else if-else, if, if-else if
+    // ! 2. switch
+
+    score = 75;
+    // ! 1. "case" can check equals value ONLY, NO range checking
+    // ! 2. No AND checking (Single condition)
+
+    // Bad Example for switch
+    switch (score) {
+      case 91:
+        grade = 'A';
+      case 92:
+        grade = 'A';
+      case 93:
+        grade = 'A';
+        // ...
+    }
+
+    // Good Example:
+    // R G B
+    char color = 'G';
+    // ! 3. By default, run all code blocks after meet the condition
+    // ! 4. You have to "break" it manually to exit the switch
+    switch (color) {
+      case 'R':
+        System.out.println("It is red.");
+        break;
+      case 'G':
+        System.out.println("It is green.");
+        break;
+      case 'B':
+        System.out.println("It is blue.");
+        break;
+    }
+
+    // Conclusion:
+    // ! 1. Finite values
+    // ! 2. Different purpose for different case
+
   }
 }

@@ -84,6 +84,8 @@ public class DemoLoop {
     String s2 = "hello";
     String targetStr = "lo";
 
+    // if (targetStr.length() > s2.length())
+
     boolean isMatched = true;
     boolean isEverMatched = false;
     for (int i = 0; i < s2.length() - targetStr.length() + 1; i++) {
@@ -103,9 +105,44 @@ public class DemoLoop {
       System.err.println("Pattern " + targetStr + " is not found.");
     }
 
+    // ! 4. contains() -> Java Method
     System.out.println(s2.contains(targetStr)); // true
 
-    System.out.println("vincent".concat("vin")); // true
-    System.out.println("vincent".concat("viny")); // false
+    System.out.println("abc".contains("ab")); // true (contains -> 是否包含)
+    System.out.println("abc".contains("abc")); // true
+    System.out.println("abc".contains("abcd")); // false
+    System.out.println("abc".contains("ABC")); // false
+
+
+    // print 2,4,6,8,10
+    // Approach 1:
+    for (int i = 1; i < 11; i++) {
+      if (i % 2 == 0) {
+        System.out.println(i);
+        // 1000 lines of code...
+      }
+    }
+    // Approach 2: continue
+    for (int i = 1; i < 11; i++) {
+      if (i % 2 != 0) {
+        continue; // go to next iteration -> i++
+      }
+      System.out.println(i);
+    }
+
+    // break -> searching, exit earlier
+    // Search the name contain J character
+    String name = "John";
+    boolean isFound = false;
+    for (int i = 0; i < name.length(); i++) { // 0-3
+      System.out.println("Test Flow:" + i);
+      if (name.charAt(i) == 'J') {
+        isFound = true;
+        break; // ! exit the loop
+      }
+    }
+    System.out.println(isFound); // true
+
+
   }
 }
