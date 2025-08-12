@@ -57,13 +57,34 @@ public class DemoArray2 {
     System.out.println(Arrays.toString(nameLengths));
 
     // String -> boolean
+    // lelel
+    // lellel
+    // aeleb
+    // aelleb
+    // ""
     String word = "lellel"; // lelel -> true, lellel -> true, peter -> false
-
-
+    boolean isPalindrome = true;
+    for (int i = 0; i < word.length(); i++) { // 6 / 2 = 3 (0/1/2), 5 / 2 = 2 (0/1)
+      if (word.charAt(i) != word.charAt(word.length() - i - 1)) {
+        isPalindrome = false;
+        break;
+      }
+    }
+    System.out.println("isPalindrome=" + isPalindrome);
 
     int x = 10;
     x = x + 1;
     System.out.println(x); // 11
+
+    // declare array
+    int[] ages = new int[3];
+    ages[0] = 31;
+    ages[1] = 9;
+    ages[2] = 4;
+    System.out.println(Arrays.toString(ages));
+
+    int[] ages2 = new int[] {31, 9, 4}; // ! given you knew all the numbers at the beginning.
+    System.out.println(Arrays.toString(ages2));
 
   }
 }

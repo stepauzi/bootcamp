@@ -141,5 +141,7 @@ public class DemoDataType {
     int distance = 2;
     char letterForC = (char) ('A' + distance); // ! explicit char value + int variable (risky)
     System.out.println(letterForC); // 'C'
+
+    
   }
 }
