@@ -73,6 +73,8 @@ public class LoopExercise {
     // print "s8b is a substring."
     // otherwise, print "s8b is not a substring."
     // Use: for loop + if + substring method
+
+    // ! only know use contain
     String s8a = "abcba";
     String s8b = "cba";
 
@@ -186,7 +188,6 @@ public class LoopExercise {
     // Use: BigDecimal
     BigDecimal b1 = new BigDecimal("0.1");
     for (int i = 0; i < arr16.length; i++){
-
     } 
 
     // 18. Count the number of target strings in the String[]
