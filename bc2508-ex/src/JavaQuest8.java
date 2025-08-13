@@ -12,28 +12,8 @@ public class JavaQuest8 {
 
     // Your program should be able to handle all the above test case.
     // code here ...
-    int[] arr = testCase1;
-    int firstMax = 0;
-    int secondMax = 0;
+    
 
-    if (arr[0] > arr[1]){
-      firstMax = arr[0];
-      secondMax = arr[1];
-    } else {
-      firstMax = arr[1];
-      secondMax = arr[0];
-    }
-    for (int i = 0; i < arr.length; i++) {
-      int num = arr[i];
-      if (num > firstMax){
-        secondMax = firstMax;
-        firstMax = num;
-      } else if (num > secondMax && num < firstMax){
-        secondMax = num;
-    } else if (num == firstMax) {
-        secondMax = firstMax;
-  }
-      System.out.println(secondMax);
-}
+
 }
 }
