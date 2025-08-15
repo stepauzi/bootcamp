@@ -187,8 +187,12 @@ public class LoopExercise {
     // Print: [0.3, 0.4, 0.7]
     // Use: BigDecimal
     BigDecimal b1 = new BigDecimal("0.1");
+    BigDecimal[] resultArr = new BigDecimal[arr16.length]
     for (int i = 0; i < arr16.length; i++){
+      
     } 
+
+    System.out.println(Arrays.toString(resultArr));
 
     // 18. Count the number of target strings in the String[]
     String[] arr18 = new String[] {"Steve", "Tommy", "Katie", "Tommy", "Lydia"};
@@ -209,6 +213,14 @@ public class LoopExercise {
     String s19 = "40289";
     char[] chars = s19.toCharArray(); 
 
+    char maxDigit = chars[0];
+    char minDigit = chars[0];
+
+    for (int i = 1; i < chars.length; i++) {
+      
+    }
+
+     System.out.println(new String(chars));
 
     // 20. Find the longest String in the String array
     // Print "longest=programming"

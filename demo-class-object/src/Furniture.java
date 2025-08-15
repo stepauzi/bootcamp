@@ -80,7 +80,7 @@ sofa1.setMainMaterial("Leather");
 sofa1.setLength(186); //cm
 sofa1.setWidth(93); //cm
 sofa1.setHeight(88); //cm
-sofa1.setWeight(22.76); //kg
+sofa1.setWeight(22.76); //kg 
 sofa1.setProducationDate(LocalDate.of(2025, 8, 1));
 
 Furniture bed1 = new Furniture();
