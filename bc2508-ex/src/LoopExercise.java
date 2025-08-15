@@ -187,11 +187,10 @@ public class LoopExercise {
     // Print: [0.3, 0.4, 0.7]
     // Use: BigDecimal
     BigDecimal b1 = new BigDecimal("0.1");
-    BigDecimal[] resultArr = new BigDecimal[arr16.length]
+    BigDecimal[] resultArr = new BigDecimal[arr16.length];
     for (int i = 0; i < arr16.length; i++){
-      
+      resultArr[i] = new BigDecimal(Float.toString(arr16[i])).add(b1);
     } 
-
     System.out.println(Arrays.toString(resultArr));
 
     // 18. Count the number of target strings in the String[]
