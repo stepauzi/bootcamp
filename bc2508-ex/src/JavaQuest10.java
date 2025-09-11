@@ -29,5 +29,8 @@ public class JavaQuest10 {
     // code here ...
     int [] newArr = oldArr;
     System.out.println("New Array: " + Arrays.toString(newArr));
+
+    input.close();
+
   }
 }

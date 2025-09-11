@@ -216,32 +216,35 @@ public class DemoLoop {
     }
     System.out.println(str3);
 
-
-
     int x = 5;
-    do{
+    do {
       System.out.println(x);
       x--;
     } while (x > 0);
 
     x = 4;
     while (x < 10) {
-      if(x % 2 == 1){
+      if(x % 2 == 1) {
         System.out.println(x);
-      } x++;
+      }
+      x++;
+    }
+    
+    for (int i = 0; i < 10; i++) {
+      if (i > 4 && i % 2 == 1) {
+        System.out.println(i);
+      }
     }
 
-    for (int i = 0; i <10; i++){
-      if(i > 4 && i % 2 == 1)
-        System.out.println(i);
-      } 
-
-        int h = 0;
-        while (h > 6){
-          if ( h > 3){
-            break;
-          } System.out.println(h);
-          h++;
-        }
+    int h = 0;
+    while (h < 6) {
+      if (h > 3) {
+        break;
+      }
+      System.out.println(h);
+      h++;
     }
   }
+
+
+}

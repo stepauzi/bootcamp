@@ -19,7 +19,7 @@ public class DemoLoop {
       System.out.println("hello");
     }
 
-    for (int i = 0; i < 6; i++) {
+    for (int i = 0; i < 3; i++) {
       System.out.println("abc");
     }
     // Step 1: int i = 0;
