@@ -1,23 +1,20 @@
 package com.bootcamp.demo;
 
-import java.time.LocalDate;
-import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import lombok.experimental.SuperBuilder;
 
-@AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 @ToString
-@EqualsAndHashCode
-@SuperBuilder
-
+@EqualsAndHashCode // !
 public abstract class Animal {
-  private String name;
   private int age;
-  private boolean isMale;
-  private LocalDate dob;
+
+  public Animal(int age) {
+    this.age = age;
+  }
 }
