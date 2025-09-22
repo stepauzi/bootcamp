@@ -196,6 +196,8 @@ create table employees (
     salary numeric(8,2)
     );
     
+    
+    
 insert into employees values ('John', 'IT', '2000-10-01', 25500.5);
 insert into employees values ('Mary', 'IT', '1999-10-01', 29000.5);
 insert into employees values ('Peter', 'MK', '2012-02-01', 14000.5);
@@ -264,9 +266,60 @@ select * from jobs;
 -- Inner Join (x)
 select e.name as employee_name
 , e.department
-, j.id
+, j.id as job_id
 , j.name as job_description
-from employees e inner join jobs j
-where e.id = j.employee_id
-and e.name = 'John';
+from employees e inner join jobs j on e.id = j.employee_id
+where e.name = 'John';
 
+-- Find employees who has no jobs
+select *
+from employees e
+where not exists (select * from jobs j where j.employee_id = e.id);
+
+-- Find employees who has jobs
+select *
+from employees e
+where exists (select * from jobs j where j.employee_id = e.id);
+
+-- what is the difference between "exists' and 'inner join'
+-- 1. 'exists' is faster than 'inner join' (most likely)
+-- 2. 'inner join' is able to select both table columns, but 'exists' cannot.
+
+-- Primary Key and Foreign Key
+create table customers (
+ id bigint primary key auto_increment,
+ name varchar(20),
+ age int
+ );
+ 
+ create table orders (
+ id bigint primary key auto_increment,
+ order_no varchar(50),
+ customer_id bigint,
+ foreign key (customer_id) references customers(id) -- FK -> for validating insert/update statement
+ );
+ 
+ drop table orders;
+ drop table customers;
+ 
+ -- insert into customers values ('John', 13); CANNOT
+ insert into customers (name, age) values ('John', 13);
+ insert into customers (name, age) values ('Sally', 8);
+ insert into customers (name, age) values ('Leo', 23);
+ 
+ insert into orders (order_no, customer_id) values ('HSBC01', 2);
+ insert into orders (order_no, customer_id) values ('HSBC02', 1);
+ 
+ select * from orders;
+ select * from customers;
+ 
+ -- Violate FK (foreign key constraint fails)
+-- insert into orders (order_id, customer_id) values ('HSBC03', 4); CANNOT
+insert into orders (order_no, customer_id) values ('HSBC03', 3);
+
+ drop table employees;
+ drop table jobs;
+
+    
+		
+        
