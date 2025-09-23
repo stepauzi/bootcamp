@@ -1,5 +1,6 @@
 create database myself_practice;
 use myself_practice;
+drop database myself_practice;
 
 create table students (
 student_id bigint primary key auto_increment,
@@ -16,9 +17,9 @@ insert into students (student_name, student_age, student_grade) values
 ('Peter', '22', 'B');
 
 select * from students
-where age > 20;
+where student_age > 20;
 
-select count(*) as total_students, round(avg(age),0) as avg_age
+select count(*) as total_students, round(avg(student_age),0) as avg_age
 from students;
 
 select grade, count(*) as num_students
@@ -26,8 +27,8 @@ from students
 group by grade
 having count(*) >= 2;
 
-select name, age from students
-order by age desc;
+select name, student_age from students
+order by student_age desc;
 
 create table courses (
 	course_id bigint primary key auto_increment,
